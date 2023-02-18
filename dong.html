@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Li's first page for Dong</title>
+    <style>
+        body {
+            /*背景图片*/
+            background-image: url("https://raw.githubusercontent.com/linspower/myimg/main/background.jpg");
+            /*背景重复*/
+            background-repeat: no-repeat;
+            /*背景大小*/
+            background-size: 100%;
+        }
+
+        * {
+            /*内边距设置为0*/
+            padding: 0;
+            /*外边距设置为0*/
+            margin: 0px;
+        }
+
+        p {
+            /*外边距设置为0*/
+            margin: 30px;
+        }
+
+        h1 {
+            width: 570px;
+            height: 80px;
+            border: none;
+            /*居中*/
+            margin: 10px auto;
+            /*相对定位 */
+            position: relative;
+            background: linear-gradient(to right, #f1ac09, #ec1a22); /* 设置背景为水平渐变，从红色到蓝色 */
+            -webkit-background-clip: text; /* 设置文本为背景剪切 */
+            -webkit-text-fill-color: transparent; /* 隐藏文本颜色 */
+            font-size: 50px;
+        }
+
+        #time {
+            width: 920px;
+            height: 80px;
+            border: none;
+            /*居中*/
+            margin: 10px auto;
+            /*相对定位 */
+            position: relative;
+            background: linear-gradient(to right, #f1ac09, #ec1a22); /* 设置背景为水平渐变，从红色到蓝色 */
+            -webkit-background-clip: text; /* 设置文本为背景剪切 */
+            -webkit-text-fill-color: transparent; /* 隐藏文本颜色 */
+            font-size: 50px;
+
+        }
+
+        #box {
+            width: 960px;
+            height: 650px;
+            border: none;
+            /*居中*/
+            margin: 10px auto;
+            /*相对定位 */
+            position: relative;
+        }
+
+        img {
+            width: 100%;
+        }
+
+        /*清除li样式*/
+        ul li {
+            /*列表样式*/
+            list-style: none;
+        }
+
+        /*设置箭头*/
+        #two li {
+            font-size: 40px;
+            /*浮动*/
+            float: left;
+            /*定位*/
+            position: absolute;
+            top: 245px;
+        }
+
+        #two #left {
+            left: 0px;
+            margin-left: 10px;
+        }
+
+        #two #right {
+            right: 0px;
+            margin-right: 10px;
+        }
+
+        /*圆点*/
+        #three {
+            position: absolute;
+            bottom: 10px;
+            left: 50%;
+
+            /*平移  自身一半*/
+            transform: translateX(-50%);
+        }
+
+        #three li {
+            width: 10px;
+            height: 10px;
+            background: #eaeaea;
+            border: 2px solid #e28453;
+            /*圆形*/
+            border-radius: 50%;
+            /*浮动*/
+            float: left;
+
+            /*设置外边距*/
+            margin: 0 3px;
+
+            /*文本居中*/
+            text-align: center;
+            /*行高*/
+            line-height: 40px;
+        }
+
+        #three li:hover {
+            border: 5px solid #282302;
+        }
+
+        #three .on {
+            background-color: #d257b7;
+        }
+
+        /*设置图片绝对定位*/
+        #one li {
+            position: absolute;
+        }
+
+
+        .card {
+            --background: linear-gradient(to left, #ea5358 0%, #f7ba2b 100%);
+            width: 90%;
+            height: 254px;
+            padding: 5px;
+            border-radius: 1rem;
+            overflow: visible;
+            background: #f7ba2b;
+            background: var(--background);
+            z-index: 1;
+            /*居中*/
+            margin: 40px auto;
+            /*相对定位 */
+            position: relative;
+        }
+
+        .card::after {
+            position: absolute;
+            content: "";
+            top: 30px;
+            left: 0;
+            right: 0;
+            z-index: -1;
+            height: 100%;
+            width: 100%;
+            transform: scale(0.8);
+            filter: blur(25px);
+            background: #f7ba2b;
+            background: var(--background);
+            transition: opacity .5s;
+        }
+
+        .card-info {
+            --color: #181818;
+            background: var(--color);
+            color: var(--color);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 99%;
+            height: 99%;
+            overflow: visible;
+            border-radius: .7rem;
+            /*居中*/
+            margin: 2px auto;
+            /*相对定位 */
+            position: relative;
+        }
+
+        .card .title {
+            font-weight: bold;
+            letter-spacing: .1em;
+        }
+
+        /*Hover*/
+        .card:hover::after {
+            opacity: 0;
+        }
+
+        .card:hover .card-info {
+            color: #f7ba2b;
+            transition: color 1s;
+            font-size: 15px;
+        }
+
+    </style>
+</head>
+<body>
+<h1>姐姐 欢迎来到我们的世界</h1><br><br>
+<div id="box">
+    <ul id="one">
+        <li><img src="https://raw.githubusercontent.com/linspower/myimg/main/01.jpg" alt=""></li>
+        <li><img src="https://raw.githubusercontent.com/linspower/myimg/main/02.jpg" alt=""></li>
+        <li><img src="https://raw.githubusercontent.com/linspower/myimg/main/03.jpg" alt=""></li>
+        <li><img src="https://raw.githubusercontent.com/linspower/myimg/main/04.jpg" alt=""></li>
+        <li><img src="https://raw.githubusercontent.com/linspower/myimg/main/05.jpg" alt=""></li>
+        <li><img src="https://raw.githubusercontent.com/linspower/myimg/main/06.jpg" alt=""></li>
+    </ul>
+
+    <ul id="three">
+        <li class="on"></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+    </ul>
+</div>
+<br><br>
+<div id="time"></div>
+<br>
+<div class="card">
+    <div class="card-info">
+        <p class="title">亲爱的姐姐，
+
+            今天是你的生日，我想趁着这个特殊的日子告诉你一些话。<br>
+            两年多前，我遇到了你，那时我并不知道你会成为我生命中如此重要的人。<br>
+            但是，在那个时候我就知道，你是一个特别的人，一个我想要了解和了解更多的人。<br>
+            这三年来，我们一起经历了很多事情，有开心有忧愁，有酸有甜有苦有辣，但每一次的经历都让我更加爱你。<br>
+            你的温柔、善良和聪明让我感到非常幸运，因为我知道你是我一生中最珍贵的人。<br>
+            今天，我想对你说：我爱你，我真的很爱你。我爱你的笑容，你的思想，你的每一个细节。我感激你在我的生命中出现，感激你的陪伴和支持。<br>
+            姐姐，我想告诉你，我希望我们可以一起经历更多的事情，一起成长和学习，一起度过余生。我希望我们的爱情可以变得更加深厚，更加坚固。<br>
+            虽然这些话有些我之前都说过了，但是这确实是我发自内心的话语，让我们一起变得优秀，变得更加相爱。<br>
+            最后，我想祝你生日快乐！愿你今天和以后每一天都充满爱和快乐。谢谢你让我的生命变得如此美好。<br>
+
+        </p>
+    </div>
+</div>
+
+</body>
+<script src="https://cdn.bootcss.com/jquery/3.3.0/jquery.min.js"></script>
+<script type="text/javascript">
+
+    // 获取所有图片
+    var imgs = $("#one li");
+    // 获取左右箭头
+    var jiantou = $("#two li");
+    // 获取所有的圆点
+    var circle = $("#three li");
+
+    // 隐藏所有图片
+    imgs.hide();
+    // 显示 第一张图片
+    imgs.eq(0).show();
+
+    // 设置初始值
+    var first = 0;
+    // 设置计时器
+    var times;
+
+    // 图片变化事件
+    function qiehuanf(i) {
+        imgs.eq(first).fadeOut(3000);  //设置图片淡出 3S
+        circle.eq(first).removeAttr("class"); //移除class属性 移除圆点效果
+
+        first = i; //将前一次点击赋值给first
+
+        imgs.eq(i).fadeIn(3000); //设置图片淡入 3S
+        circle.eq(i).attr("class", "on"); //添加class属性
+    }
+
+
+    // 单击变化
+    circle.click(function () {
+        var num = $(this).index(); //获取索引 下标
+        qiehuanf(num);
+    })
+
+    // 左右切换
+    jiantou.click(function () {
+        var num = first;
+        // $(this).index();  // 0 false 左箭头      1 true 右箭头
+        if ($(this).index()) {
+            num++;
+            if (num > imgs.length - 1) {
+                num = 0;
+            }
+        } else {
+            num--;
+            if (num < 0) {
+                num = imgs.length - 1  //回到最后一张
+            }
+        }
+        qiehuanf(num);
+
+    })
+
+    // 自动轮播
+    function f() {
+        times = setInterval(function () {
+            var numm = first;
+            numm++;
+            if (numm > imgs.length - 1) {
+                numm = 0;
+            }
+            qiehuanf(numm);
+        }, 6000)
+    }
+
+    f();  //网页加载就运行
+
+    $("#box").hover(function () {
+        clearInterval(times); //清除计时器
+    }, function () {
+        f(); //重新加载方法
+    })
+
+
+    function updateTime() {
+        var now = new Date();
+        var startDate = new Date(2020, 10, 20, 17); // November 20, 2020, 17:00
+        var diff = now.getTime() - startDate.getTime(); // 以毫秒为单位的时间差
+        var days = Math.floor(diff / (1000 * 60 * 60 * 24)); // 将毫秒转换为天
+        var hours = Math.floor(diff / (1000 * 60 * 60) % 24); // 将毫秒转换为小时
+        var minutes = Math.floor(diff / (1000 * 60) % 60); // 将毫秒转换为分钟
+        var seconds = Math.floor(diff / 1000 % 60); // 将毫秒转换为秒
+        document.getElementById("time").innerHTML = "我们相恋了: " + days + " 天 " + hours + " 小时 " + minutes + " 分钟 " + seconds + " 秒"; // 显示从 November 20, 2020, 17:00 开始
+    }
+
+    setInterval(updateTime, 1000);
+</script>
+</html>
